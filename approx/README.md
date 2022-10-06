@@ -13,9 +13,13 @@ This project, written by Alex Jackson, implements the following six different ro
 
 # Running
 
-Ensure you are in the approx project folder.
+If you are in the approx project folder:
 
 `cargo run`
+
+If you are in the main workspace:
+
+`cargo run -p approx`
 
 # Output
 
