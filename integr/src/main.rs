@@ -153,7 +153,7 @@ fn romberg(f: &Function) -> Vec<Vec<f64>> {
 
     // Generate the approximations with increasing values of n
     for i in 1..(f.k + 1) {
-        r[(i - 1) as usize].push(midpoint(&Function { n: 2_u16.pow(i as u32), ..f.clone() }));
+        r[(i - 1) as usize].push(trapezoid(&Function { n: 2_u16.pow(i as u32), ..f.clone() }));
     }
 
     for i in 1..f.k { // Loop through columns
