@@ -1,53 +1,13 @@
-The left endpoint estimate for the Function f(x)=4/(1+xˆ2) on the interval [0,1] with n = 64 is 3.15717696349.
-The right endpoint estimate for the Function f(x)=4/(1+xˆ2) on the interval [0,1] with n = 64 is 3.12592696349.
-The trapezoid endpoint estimate for the Function f(x)=4/(1+xˆ2) on the interval [0,1] with n = 64 is 3.14155196349.
-The midpoint endpoint estimate for the Function f(x)=4/(1+xˆ2) on the interval [0,1] with n = 64 is 3.14161299864.
-The Simpson's endpoint estimate for the Function f(x)=4/(1+xˆ2) on the interval [0,1] with n = 64 is 3.14159265359.
-The Romberg algorithm estimate for the Function f(x)=4/(1+xˆ2) on the interval [0, 1] with k = 4 is 3.14159266878.
+The left endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20134959511.
+The right endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20134959511.
+The trapezoid endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20134959511.
+The midpoint endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20208210639.
+The Simpson's endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20183811477.
+The Romberg algorithm estimate for the Function f(x)=3/(1+x^4) on the interval [-1, 1] with k = 4 is 5.20188539113.
 The Romberg matrix is:
-3.162352941	
-3.146800518	3.141616377	
-3.142894729	3.141592799	3.141591228	
-3.141918174	3.141592655	3.141592646	3.141592668
-The adaptive integration routine for the function f(x)=4/(1+xˆ2) on the interval [0, 1] with tol = 0.001 is 3.1415686274509804.
-
-The left endpoint estimate for the Function f(x)=xˆ4+xˆ2+1 on the interval [-1,1] with n = 64 is 3.06764316559.
-The right endpoint estimate for the Function f(x)=xˆ4+xˆ2+1 on the interval [-1,1] with n = 64 is 3.06764316559.
-The trapezoid endpoint estimate for the Function f(x)=xˆ4+xˆ2+1 on the interval [-1,1] with n = 64 is 3.06764316559.
-The midpoint endpoint estimate for the Function f(x)=xˆ4+xˆ2+1 on the interval [-1,1] with n = 64 is 3.06617844105.
-The Simpson's endpoint estimate for the Function f(x)=xˆ4+xˆ2+1 on the interval [-1,1] with n = 64 is 3.06666692098.
-The Romberg algorithm estimate for the Function f(x)=xˆ4+xˆ2+1 on the interval [-1, 1] with k = 4 is 3.06666666667.
-The Romberg matrix is:
-2.625	
-2.9453125	3.052083333	
-3.035644531	3.065755208	3.066666666	
-3.058868408	3.066609700	3.066666666	3.066666666
-The adaptive integration routine for the function f(x)=xˆ4+xˆ2+1 on the interval [-1, 1] with tol = 0.001 is 3.067708333333333.
-
-The left endpoint estimate for the Function f(x)=exp(-xˆ2) on the interval [-2.5,2.5] with n = 128 is 1.77173009372.
-The right endpoint estimate for the Function f(x)=exp(-xˆ2) on the interval [-2.5,2.5] with n = 128 is 1.77173009372.
-The trapezoid endpoint estimate for the Function f(x)=exp(-xˆ2) on the interval [-2.5,2.5] with n = 128 is 1.77173009372.
-The midpoint endpoint estimate for the Function f(x)=exp(-xˆ2) on the interval [-2.5,2.5] with n = 128 is 1.77173377355.
-The Simpson's endpoint estimate for the Function f(x)=exp(-xˆ2) on the interval [-2.5,2.5] with n = 128 is 1.77173254250.
-The Romberg algorithm estimate for the Function f(x)=exp(-xˆ2) on the interval [-2.5, 2.5] with k = 5 is 1.77173455566.
-The Romberg matrix is:
-1.048056935	
-1.765907656	2.005191229	
-1.771985790	1.774011835	1.758599876	
-1.771806954	1.771747342	1.771596376	1.771802669	
-1.771751920	1.771733576	1.771732658	1.771734821	1.771734555
-The adaptive integration routine for the function f(x)=exp(-xˆ2) on the interval [-2.5, 2.5] with tol = 0.001 is 1.7717153926058993.
-
-The left endpoint estimate for the Function f(x)=sin(xˆ2) on the interval [0,1.7724538509055159] with n = 64 is 0.89460485724.
-The right endpoint estimate for the Function f(x)=sin(xˆ2) on the interval [0,1.7724538509055159] with n = 64 is 0.89460485724.
-The trapezoid endpoint estimate for the Function f(x)=sin(xˆ2) on the interval [0,1.7724538509055159] with n = 64 is 0.89460485724.
-The midpoint endpoint estimate for the Function f(x)=sin(xˆ2) on the interval [0,1.7724538509055159] with n = 64 is 0.89494478926.
-The Simpson's endpoint estimate for the Function f(x)=sin(xˆ2) on the interval [0,1.7724538509055159] with n = 64 is 0.89483161517.
-The Romberg algorithm estimate for the Function f(x)=sin(xˆ2) on the interval [0, 1.7724538509055159] with k = 4 is 0.89483359391.
-The Romberg matrix is:
-1.042092619	
-0.925985629	0.887283300	
-0.902213597	0.894289586	0.894756672	
-0.896652249	0.894798466	0.894832392	0.894833593
-The adaptive integration routine for the function f(x)=sin(xˆ2) on the interval [0, 1.7724538509055159] with tol = 0.001 is 0.8954487014009517.
+4.5	
+5.073529411	5.264705882	
+5.170394005	5.202682203	5.198547291	
+5.194013221	5.201886293	5.201833233	5.201885391
+The adaptive integration routine for the function f(x)=3/(1+x^4) on the interval [-1, 1] with tol = 0.000001 is 5.20183899881.
 

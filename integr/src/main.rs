@@ -1,4 +1,11 @@
 fn f(x: f64) -> f64 {
+     3.0 / (1.0 + x.powf(4.0))
+}
+
+/* 
+ * Test Functions
+ *
+fn f(x: f64) -> f64 {
     4.0 / (1.0 + x.powf(2.0))
 }
 
@@ -13,6 +20,7 @@ fn h(x: f64) -> f64 {
 fn j(x: f64) -> f64 {
     x.powf(2.0).sin()
 }
+*/
 
 #[derive(Clone)]
 struct Function {
@@ -22,12 +30,6 @@ struct Function {
     b: f64,
     n: u16,
     k: u8
-}
-
-impl Function {
-    pub fn new( f: fn(f64) -> f64, i: &'static str, a: f64, b: f64, n: u16, k: u8) -> Self {
-        Self { f: f, identifier: i, a: a, b: b, n: n, k: k }
-    }
 }
 
 fn prettify(v: Vec<Vec<f64>>) -> String {
@@ -205,67 +207,67 @@ fn main() {
      * the number of subsections
      * the the dimensions of the Romberg matrix
      */
-    let ident: [Function; 4] = [
-        Function::new(f, "4/(1+xˆ2)", 0.0, 1.0, 64, 4),
-        Function::new(g, "xˆ4+xˆ2+1", -1.0, 1.0, 64, 4),
-        Function::new(h, "exp(-xˆ2)", -2.5, 2.5, 128, 5),
-        Function::new(j, "sin(xˆ2)", 0.0, std::f64::consts::PI.sqrt(), 64, 4),
-    ];
+    let i = Function {
+        f: f,
+        identifier: "3/(1+x^4)",
+        a: -1.0,
+        b: 1.0,
+        n: 64,
+        k: 4
+    };
 
-    let t: f64 = 10_f64.powf(-3.0);
+    let t: f64 = 10_f64.powf(-6.0);
 
-    for i in ident {
-        println!("The left endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
-            i.identifier,
-            i.a,
-            i.b,
-            i.n,
-            left(&i));
-
-        println!("The right endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
-            i.identifier,
-            i.a,
-            i.b,
-            i.n,
-            right(&i));
-
-        println!("The trapezoid endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
-            i.identifier,
-            i.a,
-            i.b,
-            i.n,
-            trapezoid(&i));
-
-        println!("The midpoint endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
-            i.identifier,
-            i.a,
-            i.b,
-            i.n,
-            midpoint(&i));
-
-        println!("The Simpson's endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
-            i.identifier,
-            i.a,
-            i.b,
-            i.n,
-            simpson(&i));
-
-        let r = romberg(&i);
-
-        println!("The Romberg algorithm estimate for the Function f(x)={} on the interval [{}, {}] with k = {} is {:.11}.",
-            i.identifier,
-            i.a,
-            i.b,
-            i.k,
-            r[i.k as usize - 1][i.k as usize - 1]);
-
-        println!("The Romberg matrix is:\n{}", prettify(r));
-
-        println!("The adaptive integration routine for the function f(x)={} on the interval [{}, {}] with tol = {} is {}.\n",
+    println!("The left endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
         i.identifier,
         i.a,
         i.b,
-        t,
-        adaptive(&i, t));
-    }
+        i.n,
+        left(&i));
+
+    println!("The right endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
+        i.identifier,
+        i.a,
+        i.b,
+        i.n,
+        right(&i));
+
+    println!("The trapezoid endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
+        i.identifier,
+        i.a,
+        i.b,
+        i.n,
+        trapezoid(&i));
+
+    println!("The midpoint endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
+        i.identifier,
+        i.a,
+        i.b,
+        i.n,
+        midpoint(&i));
+
+    println!("The Simpson's endpoint estimate for the Function f(x)={} on the interval [{},{}] with n = {} is {:.11}.",
+        i.identifier,
+        i.a,
+        i.b,
+        i.n,
+        simpson(&i));
+
+    let r = romberg(&i);
+
+    println!("The Romberg algorithm estimate for the Function f(x)={} on the interval [{}, {}] with k = {} is {:.11}.",
+        i.identifier,
+        i.a,
+        i.b,
+        i.k,
+        r[i.k as usize - 1][i.k as usize - 1]);
+
+    println!("The Romberg matrix is:\n{}", prettify(r));
+
+    println!("The adaptive integration routine for the function f(x)={} on the interval [{}, {}] with tol = {} is {:.11}.\n",
+    i.identifier,
+    i.a,
+    i.b,
+    t,
+    adaptive(&i, t));
 }
