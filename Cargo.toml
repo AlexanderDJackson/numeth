@@ -1,2 +1,3 @@
 [workspace]
-members = ["approx", "interp"]
+members = ["approx", "interp", "integr"]
+# Test
