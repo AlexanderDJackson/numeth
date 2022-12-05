@@ -1,0 +1,13 @@
+The left endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20134959511.
+The right endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20134959511.
+The trapezoid endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20134959511.
+The midpoint endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20208210639.
+The Simpson's endpoint estimate for the Function f(x)=3/(1+x^4) on the interval [-1,1] with n = 64 is 5.20183811477.
+The Romberg algorithm estimate for the Function f(x)=3/(1+x^4) on the interval [-1, 1] with k = 4 is 5.20188539113.
+The Romberg matrix is:
+4.5	
+5.073529411	5.264705882	
+5.170394005	5.202682203	5.198547291	
+5.194013221	5.201886293	5.201833233	5.201885391
+The adaptive integration routine for the function f(x)=3/(1+x^4) on the interval [-1, 1] with tol = 0.000001 is 5.20183899881.
+
